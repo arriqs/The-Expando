@@ -1,6 +1,10 @@
 import { useState } from 'react'; 
 import fire from '../../config/fire-config';
 import { useRouter } from 'next/router';
+import Button from '@material-ui/core/Button';
+import ButtonGroup from '@material-ui/core/ButtonGroup'
+import TextField from '@material-ui/core/TextField';
+import Grid from '@material-ui/core/Grid';
 const Register = () => {
   const router = useRouter();
   const [userName, setUsername] = useState('');
@@ -11,7 +15,7 @@ const Register = () => {
     e.preventDefault();
     if (password !== passConf) {
       setNotification(
-       'Password and password confirmation does not   match'
+       'Password and password confirmation does not match'
       )
       setTimeout(() => {
         setNotification('')
@@ -29,20 +33,22 @@ const Register = () => {
   }
   return (
     <div>
-      <h1>Create new user</h1>
-        {notification}
-      <form onSubmit={handleLogin}>
-        Email: <input type="text" value={userName} 
-        onChange={({target}) => setUsername(target.value)} /> 
-        <br />
-        Password: <input type="password" value={password} 
-        onChange={({target}) => setPassword(target.value)} /> 
-        <br />
-        Password conf: <input type="password" value={passConf}    
-        onChange={({target}) => setPassConf(target.value)} /> 
-        <br />
-        <button type="submit">Login</button>
-      </form>
+        <Grid container justify="center" alignItems="center" direction="column">
+          <Grid item>
+            <h1>Register a new account</h1>
+          </Grid>
+          <Grid item>
+            {notification}
+          </Grid>
+          <Grid item>
+            <ButtonGroup>
+                <TextField value={userName} onChange= {({target}) => setUsername(target.value)} type="text" placeholder="Enter your email"></TextField>
+                <TextField value={password} onChange= {({target}) => setPassword(target.value)} type="password" placeholder="Create your password"></TextField>
+                <TextField value={passConf} onChange= {({target}) => setPassConf(target.value)} type="password" placeholder="Confirm your password"></TextField>        
+                <Button onClick={handleLogin} variant='contained' color='primary' type="submit">Register</Button>
+            </ButtonGroup>
+          </Grid>
+        </Grid>
     </div>
   )
 }
