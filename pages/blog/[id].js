@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import { Grid } from '@material-ui/core';
+import Image from 'next/image'
 const Blog = (props) => {
   const content = props.content;
   return (
@@ -12,6 +13,11 @@ const Blog = (props) => {
         <Grid item>
           <h2>{props.title}</h2>
         </Grid>
+        <Grid item>
+        { props.imgPath ? <Image alt={props.imgAlt} src={props.imgPath} width={props.imgWidth} height={props.imgHeight} style={{ overflow: 'hidden' }} /> : null }
+        </Grid>
+        <br />
+        <br />
         <Grid item>
           {content.map(paragraph =>
           <>
@@ -37,11 +43,19 @@ export const getServerSideProps = async ({ query }) => {
     .then(result => {
       content['title'] = result.data().title;
       content['content'] = result.data().content;
+      content['imgPath'] = result.data().imgPath;
+      content['imgAlt'] = result.data().imgAlt;
+      content['imgHeight'] = result.data().imgHeight;
+      content['imgWidth'] = result.data().imgWidth;
     });
 return {
     props: {
       title: content.title,
       content: content.content,
+      imgPath: content.imgPath,
+      imgAlt: content.imgPath,
+      imgHeight: content.imgHeight,
+      imgWidth: content.imgWidth,
     }
   }
 }

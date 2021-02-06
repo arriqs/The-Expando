@@ -27,6 +27,7 @@ import CollectionsBookmarkIcon from '@material-ui/icons/CollectionsBookmark';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
+import EditIcon from '@material-ui/icons/Edit';
 import MailIcon from '@material-ui/icons/Mail';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
@@ -107,7 +108,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function MiniDrawer(props) {
-  const { title, setTitle, tag, setTag, cite1, setCite1, cite2, setCite2, content, setContent, handleSubmit, blogs, notification, loggedIn, handleLogout, user } = props;
+  const { blogs, notification, loggedIn, handleLogout, user } = props;
   const classes = useStyles();
   const theme = useTheme();
   const [openMenu, setOpenMenu] = React.useState(false);
@@ -189,11 +190,13 @@ export default function MiniDrawer(props) {
         <Divider />
         <div style={{ paddingTop: 1 + 'em' }}></div>
         <List>
-            <ListItem button key='Home'>
-              <ListItemIcon><HomeRoundedIcon /></ListItemIcon>
-              <ListItemText primary="Home" />
-            </ListItem>
-            <Link href='#'>
+            <Link href='/'>
+              <ListItem button key={"Home"}>
+                <ListItemIcon><HomeRoundedIcon /></ListItemIcon>
+                <ListItemText primary={"Home"} />
+              </ListItem>
+            </Link>
+            <Link href='/'>
               <ListItem button key={"Browse All Courses"}>
                 <ListItemIcon><SchoolIcon /></ListItemIcon>
                 <ListItemText primary={"Browse All Courses"} />
@@ -231,18 +234,33 @@ export default function MiniDrawer(props) {
                   )}
                 </List>
               </Collapse>
-
-            <Link href='#'>
-              <ListItem button key={"Shop"}>
-                <ListItemIcon><ShoppingCartIcon /></ListItemIcon>
-                <ListItemText primary={"Shop"} />
-              </ListItem>
-            </Link>
+              <Link href='https://shop.debatekansascity.org'>
+                <a target='_blank' style={{ color: 'black', textDecoration: 'none' }}>
+                  <ListItem button key={"Shop"}>
+                    <ListItemIcon><ShoppingCartIcon /></ListItemIcon>
+                    <ListItemText primary={"Shop"} />
+                  </ListItem>
+                </a>
+              </Link>
+              <Link href='https://debatekansascity.org/contribute'>
+                <a target='_blank' style={{ color: 'black', textDecoration: 'none' }}>
+                  <ListItem button key={"Donate"}>
+                    <ListItemIcon><LocalAtmIcon /></ListItemIcon>
+                    <ListItemText primary={"Donate"} />
+                  </ListItem>
+                </a>
+              </Link>
         </List>
         <Divider />
         <List>
           { props.loggedIn ?
             <>
+              <Link href='/editor'>
+                <ListItem button key={"Create"}>
+                  <ListItemIcon><EditIcon /></ListItemIcon>
+                  <ListItemText primary={"Create"} />
+                </ListItem>
+              </Link>
               <Link href='/'>
                 <ListItem button key={"My Courses"}>
                   <ListItemIcon><CollectionsBookmarkIcon /></ListItemIcon>
@@ -253,12 +271,6 @@ export default function MiniDrawer(props) {
                 <ListItem button key={"My Account"}>
                   <ListItemIcon><FingerprintIcon /></ListItemIcon>
                   <ListItemText primary={"My Account"} />
-                </ListItem>
-              </Link>
-              <Link href='/'>
-                <ListItem button key={"Donate"}>
-                  <ListItemIcon><LocalAtmIcon /></ListItemIcon>
-                  <ListItemText primary={"Donate"} />
                 </ListItem>
               </Link>
               <ListItem button key={"Logout"}>
@@ -284,94 +296,6 @@ export default function MiniDrawer(props) {
           }
         </List>
       </Drawer>
-      <main className={classes.content}>
-      <div>
-            <br />
-            <br />
-            <Toolbar></Toolbar>
-        <Grid container justify="center" alignItems="center" direction="column">
-          <Grid item>
-            <h3>DEBATE-Kansas City presents:</h3>
-          </Grid>
-          <Grid item>
-            <h1>The Expando</h1>
-          </Grid>
-          <Grid item> {props.notification} </Grid>
-          <Grid item>
-            <Carousel />
-          </Grid>
-          <Grid item>
-            <br />
-            {props.notification}
-            <br />
-              {props.blogs.map(blog =>
-                <Grid item>
-                  <ExpandoCard id={blog.id} imgTitle={blog.imgTitle} imgAlt={blog.imgAlt} imgPath={blog.imgPath} title={blog.title} author={blog.author} preview={blog.preview} imgHeight={blog.imgHeight} imgWidth={blog.imgWidth} content={blog.content} value='content' />
-                </Grid>
-              )} 
-          </Grid>
-          {props.loggedIn && (
-            props.user 
-            ? 
-            (<>
-            {/*
-              <Grid container xs={12} alignItems="center" direction="column">
-              <h3>Add Card</h3>
-                {props.notification}
-                {props.blogs.map(blog =>
-                <Grid item>
-                  <ExpandoCard imgTitle={blog.imgTitle} imgAlt={blog.imgAlt} imgPath={blog.imgPath} title={blog.title} tag={blog.tag} cite1={blog.cite1} cite2={blog.cite2} content={blog.content} value='content' />
-                </Grid>
-                )} 
-              </Grid>
-                
-              <h2>Cards</h2>
-              <div>
-              
-              <br />
-              <CutCard
-                title={title} setTitle={setTitle} 
-                tag={tag} setTag={setTag}
-                cite1={cite1} setCite1={setCite1}
-                cite2={cite2} setCite2={setCite2}
-                content={content} setContent={setContent}
-                handleSubmit={handleSubmit} handleLogout={handleLogout}
-                blogs={blogs} 
-                notification={notification} 
-                loggedIn={loggedIn}
-                user={user}
-              />
-              </div>
-              */}
-            </>) : console.log("User logged out"))}
-        </Grid>
-        </div>
-        <div className={classes.toolbar} />
-        
-        <Typography paragraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum
-          facilisis leo vel. Risus at ultrices mi tempus imperdiet. Semper risus in hendrerit
-          gravida rutrum quisque non tellus. Convallis convallis tellus id interdum velit laoreet id
-          donec ultrices. Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit
-          adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra nibh cras.
-          Metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo quis
-          imperdiet massa tincidunt. Cras tincidunt lobortis feugiat vivamus at augue. At augue eget
-          arcu dictum varius duis at consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem
-          donec massa sapien faucibus et molestie ac.
-        </Typography>
-        <Typography paragraph>
-          Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper eget nulla
-          facilisi etiam dignissim diam. Pulvinar elementum integer enim neque volutpat ac
-          tincidunt. Ornare suspendisse sed nisi lacus sed viverra tellus. Purus sit amet volutpat
-          consequat mauris. Elementum eu facilisis sed odio morbi. Euismod lacinia at quis risus sed
-          vulputate odio. Morbi tincidunt ornare massa eget egestas purus viverra accumsan in. In
-          hendrerit gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem et
-          tortor. Habitant morbi tristique senectus et. Adipiscing elit duis tristique sollicitudin
-          nibh sit. Ornare aenean euismod elementum nisi quis eleifend. Commodo viverra maecenas
-          accumsan lacus vel facilisis. Nulla posuere sollicitudin aliquam ultrices sagittis orci a.
-        </Typography>
-      </main>
     </div>
   );
 }
