@@ -108,7 +108,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function MiniDrawer(props) {
-  const { blogs, notification, loggedIn, handleLogout, user } = props;
+  const { blogs, PageContent, notification, loggedIn, handleLogout, user } = props;
   const classes = useStyles();
   const theme = useTheme();
   const [openMenu, setOpenMenu] = React.useState(false);
@@ -256,10 +256,12 @@ export default function MiniDrawer(props) {
           { props.loggedIn ?
             <>
               <Link href='/editor'>
-                <ListItem button key={"Create"}>
-                  <ListItemIcon><EditIcon /></ListItemIcon>
-                  <ListItemText primary={"Create"} />
-                </ListItem>
+                <a>
+                  <ListItem button key={"Create"}>
+                    <ListItemIcon><EditIcon /></ListItemIcon>
+                    <ListItemText primary={"Create"} />
+                  </ListItem>
+                </a>
               </Link>
               <Link href='/'>
                 <ListItem button key={"My Courses"}>
@@ -296,6 +298,10 @@ export default function MiniDrawer(props) {
           }
         </List>
       </Drawer>
+      <PageContent
+        blogs={blogs}
+        notification={notification}
+      />
     </div>
   );
 }

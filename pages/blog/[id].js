@@ -3,12 +3,19 @@ import Link from 'next/link';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import { Grid } from '@material-ui/core';
-import Image from 'next/image'
+import Image from 'next/image';
+import MiniDrawer from '../components/MiniDrawer';
 const Blog = (props) => {
   const content = props.content;
   return (
     <Container maxWidth='sm'>
     <div>
+      <MiniDrawer 
+          blogs={blogs}
+          loggedIn={loggedIn} 
+          handleLogout={handleLogout}
+          user={user}
+      />
       <Grid container justify='center'>
         <Grid item>
           <h2>{props.title}</h2>
