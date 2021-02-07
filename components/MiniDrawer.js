@@ -298,10 +298,14 @@ export default function MiniDrawer(props) {
           }
         </List>
       </Drawer>
-      <PageContent
+      {PageContent ? 
+        <PageContent
         blogs={blogs}
         notification={notification}
-      />
+        />
+        :
+        null
+      }
     </div>
   );
 }
