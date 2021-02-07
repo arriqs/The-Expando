@@ -255,7 +255,7 @@ export default function MiniDrawer(props) {
         <List>
           { props.loggedIn ?
             <>
-              <Link href='/editor'>
+              <Link href='/editor' passHref>
                 <a>
                   <ListItem button key={"Create"}>
                     <ListItemIcon><EditIcon /></ListItemIcon>
