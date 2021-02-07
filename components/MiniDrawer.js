@@ -190,7 +190,7 @@ export default function MiniDrawer(props) {
         <Divider />
         <div style={{ paddingTop: 1 + 'em' }}></div>
         <List>
-            <Link href='/'>
+            <Link href='/' replace>
               <ListItem button key={"Home"}>
                 <ListItemIcon><HomeRoundedIcon /></ListItemIcon>
                 <ListItemText primary={"Home"} />
@@ -212,7 +212,7 @@ export default function MiniDrawer(props) {
               <Collapse in={openMenu} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
                   {blogs.map(blog =>
-                    <Link href='/blog/[id]' as={'/blog/' + blog.id}>
+                    <Link href='/blog/[id]' as={'/blog/' + blog.id} replace>
                       <a style={{ textDecoration: 'none' }} >
                         <ListItem button className={classes.nested}>
                           <ListItemText primary={
@@ -298,14 +298,10 @@ export default function MiniDrawer(props) {
           }
         </List>
       </Drawer>
-      {PageContent ? 
-        <PageContent
+      <PageContent
         blogs={blogs}
         notification={notification}
-        />
-        :
-        null
-      }
+      />
     </div>
   );
 }
