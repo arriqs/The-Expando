@@ -100,7 +100,7 @@ export default function ExpandoCard(props) {
                 <Collapse in={expanded1} timeout="auto" unmountOnExit>
                   { props.imgPath ? <Image alt={props.imgAlt} src={props.imgPath} className={classes.media} title={props.imgTitle} width={props.imgWidth} height={props.imgHeight} style={{ overflow: 'hidden' }} /> : null }  
                 <CardContent>
-                  <Typography style={{ textAlign: 'center' }} variant="body3" color="textSecondary" component="p">
+                  <Typography style={{ textAlign: 'center' }} variant="body2" color="textSecondary" component="p">
                   {props.imgAlt}
                   </Typography>
                   <br />

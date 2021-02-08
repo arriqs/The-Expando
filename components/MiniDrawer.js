@@ -202,7 +202,7 @@ export default function MiniDrawer(props) {
                 <ListItemText primary={"Browse All Courses"} />
               </ListItem>
             </Link>
-            <Link href='/blog/posts' >
+            <Link href='/posts' >
               <ListItem button key="Blog" onClick={handleMenuClick}>
                 <ListItemIcon>
                   <MenuBookIcon />
