@@ -202,6 +202,7 @@ export default function MiniDrawer(props) {
                 <ListItemText primary={"Browse All Courses"} />
               </ListItem>
             </Link>
+            <Link href='/blog/posts' >
               <ListItem button key="Blog" onClick={handleMenuClick}>
                 <ListItemIcon>
                   <MenuBookIcon />
@@ -209,6 +210,7 @@ export default function MiniDrawer(props) {
                 <ListItemText primary="Blog" />
                 {openMenu ? <ExpandLessIcon /> : <ExpandMoreIcon />}
               </ListItem>
+            </Link>
               <Collapse in={openMenu} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
                   {blogs.map(blog =>

@@ -21,6 +21,9 @@ const Blog = (props) => {
           <Grid item>
             <h2>{props.title}</h2>
           </Grid>
+          <br />
+          {notification}
+          <br/>
           <Grid item>
           { props.imgPath ? <Image alt={props.imgAlt} src={props.imgPath} width={props.imgWidth} height={props.imgHeight} style={{ overflow: 'hidden' }} /> : null }
           </Grid>
@@ -52,18 +55,6 @@ const Blog = (props) => {
       }
     })
   const [blogs, setBlogs] = useState([]);
-  useEffect(() => {
-    fire.firestore()
-      .collection('blog')
-      .onSnapshot(snap => {
-        const blogs = snap.docs.map(doc => ({
-          id: doc.id,
-          ...doc.data()
-        }));
-        setBlogs(blogs);
-        
-      });
-  }, []);
   const handleLogout = () => {
     fire.auth()
       .signOut()
@@ -104,7 +95,7 @@ export const getServerSideProps = async ({ query }) => {
       content['imgHeight'] = result.data().imgHeight;
       content['imgWidth'] = result.data().imgWidth;
     });
-return {
+  return {
     props: {
       title: content.title,
       content: content.content,

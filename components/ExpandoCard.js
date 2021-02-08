@@ -47,7 +47,8 @@ const useStyles = makeStyles((theme) => ({
 
 
 export default function ExpandoCard(props) {
-  const [expanded1, setExpanded1] = React.useState(false);
+  const expandedOnLoad = props.expandedOnLoad;
+  const [expanded1, setExpanded1] = React.useState(expandedOnLoad);
   const [expanded2, setExpanded2] = React.useState(false);
   const [collapseIn, setCollapseIn] = React.useState(false);
   const classes = useStyles();
