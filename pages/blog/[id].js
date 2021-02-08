@@ -55,6 +55,18 @@ const Blog = (props) => {
       }
     })
   const [blogs, setBlogs] = useState([]);
+  useEffect(() => {
+    fire.firestore()
+      .collection('blog')
+      .onSnapshot(snap => {
+        const blogs = snap.docs.map(doc => ({
+          id: doc.id,
+          ...doc.data()
+        }));
+        setBlogs(blogs);
+        
+      });
+  }, []);
   const handleLogout = () => {
     fire.auth()
       .signOut()
