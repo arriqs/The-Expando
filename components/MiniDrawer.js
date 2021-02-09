@@ -203,7 +203,7 @@ export default function MiniDrawer(props) {
               </ListItem>
             </Link>
             <Link href='/blog/posts' passHref>
-              <a target='_blank' style={{ color: 'black', textDecoration: 'none' }}>
+              <a shallow style={{ color: 'black', textDecoration: 'none' }}>
                 <ListItem button key="Blog" onClick={handleMenuClick}>
                   <ListItemIcon>
                     <MenuBookIcon />
