@@ -202,7 +202,7 @@ export default function MiniDrawer(props) {
                 <ListItemText primary={"Browse All Courses"} />
               </ListItem>
             </Link>
-            <Link href='/posts' passHref>
+            <Link href='/' passHref>
               <a target='_blank' style={{ color: 'black', textDecoration: 'none' }}>
                 <ListItem button key="Blog" onClick={handleMenuClick}>
                   <ListItemIcon>
@@ -259,7 +259,7 @@ export default function MiniDrawer(props) {
         <List>
           { props.loggedIn ?
             <>
-              <Link href='/utilities/editor' passHref>
+              <Link href='/blog/edit' passHref>
                 <a>
                   <ListItem button key={"Create"}>
                     <ListItemIcon><EditIcon /></ListItemIcon>
