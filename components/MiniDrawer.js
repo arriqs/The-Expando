@@ -157,10 +157,10 @@ export default function MiniDrawer(props) {
                 </Typography>
               </Grid>
               <Grid item>
-                { props.loggedIn && props.user 
+                { loggedIn && user 
                   ?
                   <>
-                  <Typography>{props.user.email}</Typography> 
+                  <Typography>{user.email}</Typography> 
                   </>
                   :
                   <></>
@@ -202,7 +202,7 @@ export default function MiniDrawer(props) {
                 <ListItemText primary={"Browse All Courses"} />
               </ListItem>
             </Link>
-            <Link href='/' passHref>
+            <Link href='/blog/posts' passHref>
               <a target='_blank' style={{ color: 'black', textDecoration: 'none' }}>
                 <ListItem button key="Blog" onClick={handleMenuClick}>
                   <ListItemIcon>
