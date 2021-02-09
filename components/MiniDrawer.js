@@ -190,7 +190,7 @@ export default function MiniDrawer(props) {
         <Divider />
         <div style={{ paddingTop: 1 + 'em' }}></div>
         <List>
-            <Link href='/' shallow>
+            <Link href='/' replace>
               <ListItem button key={"Home"}>
                 <ListItemIcon><HomeRoundedIcon /></ListItemIcon>
                 <ListItemText primary={"Home"} />
@@ -202,7 +202,7 @@ export default function MiniDrawer(props) {
                 <ListItemText primary={"Browse All Courses"} />
               </ListItem>
             </Link>
-            <Link href='/posts' as={'/posts'} shallow passHref>
+            <Link href='/utilities/posts' passHref>
               <a target='_blank' style={{ color: 'black', textDecoration: 'none' }}>
                 <ListItem button key="Blog" onClick={handleMenuClick}>
                   <ListItemIcon>
@@ -259,7 +259,7 @@ export default function MiniDrawer(props) {
         <List>
           { props.loggedIn ?
             <>
-              <Link shallow href='/edit' as={'/edit'} passHref>
+              <Link href='/utilities/editor' passHref>
                 <a>
                   <ListItem button key={"Create"}>
                     <ListItemIcon><EditIcon /></ListItemIcon>
