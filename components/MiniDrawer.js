@@ -123,6 +123,7 @@ export default function MiniDrawer(props) {
 
   const handleDrawerClose = () => {
     setOpen(false);
+    setOpenMenu(!openMenu)
   };
   return (
     <div className={classes.root}>
@@ -202,17 +203,17 @@ export default function MiniDrawer(props) {
                 <ListItemText primary={"Browse All Courses"} />
               </ListItem>
             </Link>
-            <Link href='/blog/posts' passHref>
-              <a shallow style={{ color: 'black', textDecoration: 'none' }}>
-                <ListItem button key="Blog" onClick={handleMenuClick}>
+            <ListItem button key="Blog" onClick={handleMenuClick}>
+              <Link href='/blog/posts' passHref>
+                <a shallow style={{ color: 'black', textDecoration: 'none' }}>
                   <ListItemIcon>
                     <MenuBookIcon />
                   </ListItemIcon>
-                  <ListItemText primary="Blog" />
-                  {openMenu ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-                </ListItem>
-              </a>
-            </Link>
+                </a>
+              </Link>
+              <ListItemText primary="Blog" />
+              {openMenu ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+            </ListItem>
               <Collapse in={openMenu} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
                   {blogs.map(blog =>

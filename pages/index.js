@@ -109,13 +109,6 @@ function PageContent(props) {
               nibh sit. Ornare aenean euismod elementum nisi quis eleifend. Commodo viverra maecenas
               accumsan lacus vel facilisis. Nulla posuere sollicitudin aliquam ultrices sagittis orci a.
             </Typography>
-          </Grid>
-          <Grid container justify='space-evenly' alignItems='center' item>
-            {blogs.map(blog =>
-              <Grid item>
-                <ExpandoCard id={blog.id} imgTitle={blog.imgTitle} imgAlt={blog.imgAlt} imgPath={blog.imgPath} title={blog.title} author={blog.author} preview={blog.preview} imgHeight={blog.imgHeight} imgWidth={blog.imgWidth} content={blog.content} value='content' />
-              </Grid>
-            )}
           </Grid> 
         </Grid>
       </Grid>
