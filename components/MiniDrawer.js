@@ -150,10 +150,7 @@ export default function MiniDrawer(props) {
                   <MenuIcon />
                 </IconButton></Grid>
               <Grid item>
-                <Typography >
-                  The Expando
-                </Typography>
-                <Image src={'/images/DKC Logo - Black.PNG'} height={65 + 'px'} width={85 + 'px'} />
+                <Image src={'/images/DKC-Logo-White.png'} height={65 + 'px'} width={85 + 'px'} />
               </Grid>
               <Grid item>
                 { loggedIn && user 
