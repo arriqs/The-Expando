@@ -123,7 +123,7 @@ export default function MiniDrawer(props) {
 
   const handleDrawerClose = () => {
     setOpen(false);
-    setOpenMenu(!openMenu)
+    if (openMenu === true){setOpenMenu(!openMenu)};
   };
   return (
     <div className={classes.root}>
@@ -150,12 +150,10 @@ export default function MiniDrawer(props) {
                   <MenuIcon />
                 </IconButton></Grid>
               <Grid item>
-                <Typography variant='h6'>
-                  DEBATE-Kansas City
-                </Typography>
-                <Typography>
+                <Typography >
                   The Expando
                 </Typography>
+                <Image src={'/images/DKC Logo - Black.PNG'} height={65 + 'px'} width={85 + 'px'} />
               </Grid>
               <Grid item>
                 { loggedIn && user 
@@ -258,10 +256,10 @@ export default function MiniDrawer(props) {
         </List>
         <Divider />
         <List>
-          { props.loggedIn ?
+          { loggedIn ?
             <>
               <Link href='/blog/edit' passHref>
-                <a>
+                <a style={{ textDecoration: 'none', color: 'black'}}>
                   <ListItem button key={"Create"}>
                     <ListItemIcon><EditIcon /></ListItemIcon>
                     <ListItemText primary={"Create"} />
@@ -281,8 +279,8 @@ export default function MiniDrawer(props) {
                 </ListItem>
               </Link>
               <ListItem button key={"Logout"}>
-                <ListItemIcon><LockIcon onClick={props.handleLogout} /></ListItemIcon>
-                <ListItemText primary={ props.loggedIn ? "Logout" : "Login" } />
+                <ListItemIcon><LockIcon onClick={handleLogout} /></ListItemIcon>
+                <ListItemText primary={ loggedIn ? "Logout" : "Login" } />
               </ListItem>
             </>
             :
