@@ -1,1 +1,1 @@
-This is my first attempt at a DKC NextJS-Firebase web app that allows users to participate in auctions.
+This is a bootstrapped example of an education application that allows users to enroll in courses that teach the principles of competitive debate.
