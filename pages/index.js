@@ -87,27 +87,13 @@ function PageContent(props) {
             {notification}
             <br />
             <Typography paragraph>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-              ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum
-              facilisis leo vel. Risus at ultrices mi tempus imperdiet. Semper risus in hendrerit
-              gravida rutrum quisque non tellus. Convallis convallis tellus id interdum velit laoreet id
-              donec ultrices. Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit
-              adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra nibh cras.
-              Metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo quis
-              imperdiet massa tincidunt. Cras tincidunt lobortis feugiat vivamus at augue. At augue eget
-              arcu dictum varius duis at consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem
-              donec massa sapien faucibus et molestie ac.
+            Welcome to The Expando, DEBATE-Kansas City’s online debate learning portal. Here you will find coursework, reading materials, videos, and more to help you become the best debater and/or educator that you can possibly be. We have found that there is no shortage of hungry, ambitious debaters, but instead a dearth of relevant and engaging resources. We aim to provide an experience that gets both coaches and students excited about teaching and learning debate.
             </Typography>
             <Typography paragraph>
-              Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper eget nulla
-              facilisi etiam dignissim diam. Pulvinar elementum integer enim neque volutpat ac
-              tincidunt. Ornare suspendisse sed nisi lacus sed viverra tellus. Purus sit amet volutpat
-              consequat mauris. Elementum eu facilisis sed odio morbi. Euismod lacinia at quis risus sed
-              vulputate odio. Morbi tincidunt ornare massa eget egestas purus viverra accumsan in. In
-              hendrerit gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem et
-              tortor. Habitant morbi tristique senectus et. Adipiscing elit duis tristique sollicitudin
-              nibh sit. Ornare aenean euismod elementum nisi quis eleifend. Commodo viverra maecenas
-              accumsan lacus vel facilisis. Nulla posuere sollicitudin aliquam ultrices sagittis orci a.
+              We are well versed in the art of argumentation, and our expertise does not stop there. From poetry to dramatic interpretation, we also endeavor to inspire students to experiment against the limitations of the marriage between performance and competition.
+            </Typography>
+            <Typography paragraph>
+              Debate is stressful enough as an active competitor, and judging can be equally as rough. We offer courses to help judges become acquainted with the norms of debate and the expectations placed upon them as critics.
             </Typography>
           </Grid> 
         </Grid>
