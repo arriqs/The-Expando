@@ -87,7 +87,7 @@ function PageContent(props) {
             {notification}
             <br />
             <Typography paragraph>
-            Welcome to The Expando, DEBATE-Kansas City’s online debate learning portal. Here you will find coursework, reading materials, videos, and more to help you become the best debater and/or educator that you can possibly be. We have found that there is no shortage of hungry, ambitious debaters, but instead a dearth of relevant and engaging resources. We aim to provide an experience that gets both coaches and students excited about teaching and learning debate.
+              Welcome to The Expando, DEBATE-Kansas City’s online debate learning portal. Here you will find coursework, reading materials, videos, and more to help you become the best debater and/or educator that you can possibly be. We have found that there is no shortage of hungry, ambitious debaters, but instead a dearth of relevant and engaging resources. We aim to provide an experience that gets both coaches and students excited about teaching and learning debate.
             </Typography>
             <Typography paragraph>
               We are well versed in the art of argumentation, and our expertise does not stop there. From poetry to dramatic interpretation, we also endeavor to inspire students to experiment against the limitations of the marriage between performance and competition.

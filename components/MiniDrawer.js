@@ -39,6 +39,12 @@ import Carousel from '../components/Carousel';
 import NavTabs from '../components/NavTabs';
 import ExpandoCard from '../components/ExpandoCard';
 import CutCard from '../components/CutCard';
+import WidgetsIcon from '@material-ui/icons/Widgets';
+import ContactMailIcon from '@material-ui/icons/ContactMail';
+import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople';
+import BusinessIcon from '@material-ui/icons/Business';
+import PeopleIcon from '@material-ui/icons/People';
+import NewReleasesIcon from '@material-ui/icons/NewReleases';
 
 const drawerWidth = 240;
 
@@ -242,6 +248,15 @@ export default function MiniDrawer(props) {
                   </ListItem>
                 </a>
               </Link>
+              <Link href='/'>
+                <a style={{ color: 'black', textDecoration: 'none' }}>
+                  <ListItem button key={"News"}>
+                    <ListItemIcon><NewReleasesIcon /></ListItemIcon>
+                    <ListItemText primary={"News"} />
+                  </ListItem>
+                </a>
+              </Link>
+              
               <Link href='https://debatekansascity.org/contribute'>
                 <a target='_blank' style={{ color: 'black', textDecoration: 'none' }}>
                   <ListItem button key={"Donate"}>
@@ -296,6 +311,46 @@ export default function MiniDrawer(props) {
               </Link>
             </>
           }
+          <Link href='/resources'>
+            <a style={{ color: 'black', textDecoration: 'none' }}>
+              <ListItem button key={"Resources"}>
+                <ListItemIcon><WidgetsIcon /></ListItemIcon>
+                <ListItemText primary={"Resources"} />
+              </ListItem>
+            </a>
+          </Link>
+          <Link href='/contact'>
+            <a style={{ color: 'black', textDecoration: 'none' }}>
+              <ListItem button key={"Contact"}>
+                <ListItemIcon><ContactMailIcon /></ListItemIcon>
+                <ListItemText primary={"Contact"} />
+              </ListItem>
+            </a>
+          </Link>
+          <Link href='/volunteer'>
+            <a style={{ color: 'black', textDecoration: 'none' }}>
+              <ListItem button key={"Volunteer"}>
+                <ListItemIcon><EmojiPeopleIcon /></ListItemIcon>
+                <ListItemText primary={"Volunteer"} />
+              </ListItem>
+            </a>
+          </Link>
+          <Link href='/about'>
+            <a style={{ color: 'black', textDecoration: 'none' }}>
+              <ListItem button key={"About"}>
+                <ListItemIcon><BusinessIcon /></ListItemIcon>
+                <ListItemText primary={"About"} />
+              </ListItem>
+            </a>
+          </Link>
+          <Link href='/staff'>
+            <a style={{ color: 'black', textDecoration: 'none' }}>
+              <ListItem button key={"Staff"}>
+                <ListItemIcon><PeopleIcon /></ListItemIcon>
+                <ListItemText primary={"Staff"} />
+              </ListItem>
+            </a>
+          </Link>
         </List>
       </Drawer>
       <PageContent
