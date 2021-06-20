@@ -20,10 +20,11 @@ import ExpandoCard from '../components/ExpandoCard';
 import Carousel from '../components/Carousel';
 import MiniDrawer from '../components/MiniDrawer';
 import Container from '@material-ui/core/Container';
+import Image from 'next/image';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 600,
+    maxWidth: 1400,
   },
   media: {
     height: 0,
@@ -67,20 +68,14 @@ export async function getServerSideProps() {
 function PageContent(props) {
   const { notification, blogs } = props;
   return (
-    <Container maxWidth='md'>
+    <Container maxWidth='lg'>
       <Grid container justify alignItems='center'>
         <br />
         <br />
         <Toolbar></Toolbar>
         <Grid container justify="center" alignItems="center" direction="column">
           <Grid item>
-            <h3>DEBATE-Kansas City presents:</h3>
-          </Grid>
-          <Grid item>
-            <h1>The Expando</h1>
-          </Grid>
-          <Grid item>
-            <Carousel />
+            <img src="/images/writing.jpg" height="auto" width="100vw" style={{maxWidth:"100vw", width:"60vw", height: '80vh'}} />
           </Grid>
           <Grid item>
             <br />

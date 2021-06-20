@@ -77,6 +77,9 @@ function PageContent(props) {
             <h1>About Us</h1>
           </Grid>
           <Grid item>
+            <img src="/images/dkc-lecture-auditorium.jpg" height="auto" width="100vw" style={{maxWidth:"100vw", width:"60vw", height: '80vh'}} />
+          </Grid>
+          <Grid item>
             <p>DEBATE-Kansas City provides students K-12 with debate workshops, tournaments, scholarships, resources, and interactive experiences. As these students matriculate into college, we continue to support them with coaching, research, and mentoring. #DKCFam is among the core elements of our approach. We pride ourselves on the lifelong connections we are able to foster with our students as, together, we build an ever-growing and lasting community. The youth with whom we are so privileged to work are dedicated to the enduring struggle of being and becoming advocates for those most vulnerable among them.
             </p>
             <br />

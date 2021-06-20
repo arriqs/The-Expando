@@ -72,24 +72,27 @@ function PageContent(props) {
         <br />
         <br />
         <Toolbar></Toolbar>
-        <Grid container justify="center" alignItems="center" direction="column">
+        <Grid style={{paddingLeft:"0px"}} container justify="center" alignItems="center" direction="column">
           <Grid item>
             <h1>DEBATE-Kansas City Staff</h1>
           </Grid>
           <Grid item>
-            <h2>Meet the Team</h2>
-            <h3>Isaac Allen</h3>
-            <p>Isaac Allen has been working for DEBATE-Kansas City since 2006. In August of 2018, he was promoted to Executive Director. In his time with DKC, Isaac has worked to grow participation from a few hundred students in 2006 to over a thousand students in 2017.</p>
-            <p>He spearheaded DKC's expansion into middle school programming, an endeavor that has been hailed as a national model for middle school debate. Mr. Allen has been actively involved with policy debate for nearly two decadeds including coaching and debating for Missouri State University. Mr. Allen has also served as adjunct faculty for the UMKC Department of Communication Studies, teaching public speaking, discourse, and interpersonal communication courses.</p>
-            <br />
-            <h3>Corey Fisher</h3>
-            <p>Corey Fisher is an alum of DEBATE-Kansas City and has been volunteering around the league since graduating high school. Corey debated in high school at Lincoln College Prep, where he qualified for the National Speech & Debate Association (NSDA) tournament his senior year.</p>
-            <p>In college, Corey debated for the University of Missouri-Kansas City, where he won an array of top speaker awards, advanced through countless elimation rounds, and, of course, hoisted his fair share of trophies.</p>
-            <p>His senior year of college served as a triumphant finale to a storied debate career. Corey and his partner Anthony were selected as one of the top 16 teams in the country, receiving a 1st Round at Large bid to the National Debate Tournament (NDT). Corey and Anthony finished 2nd at the Cross Examination Debate Association (CEDA) National Tournament, with Corey earning the honors of 2nd Place Speaker and the CEDA Debater of the Year award.</p>
-            <p>At the NDT, Corey and Anthony advanced to the quarter-final round. Corey was named the 7th Place Speaker. Corey has also served as an assistant coach for both Emory and Harvard University.</p>
-            
+          <img src="/images/staff.jpg" height="auto" width="100vw" style={{position:"absolute", top:"5%", left:"5%", maxWidth:"100vw", width:"100vw", height: 'auto', filter: "brightness(0.65)"}} />
+          <br />
+          <h2 style={{position:"absolute", top:"35%", left:"35%", zIndex:"5", fontSize:"4rem", color:"white"}}>Meet the Team</h2>
           </Grid>
-           
+          <Grid container justify="space-evenly" alignItems="flex-start" direction="row" style={{marginTop:"100vh"}}>
+          <Grid item>
+            <ExpandoCard 
+              expandedOnLoad={true} imgTitle={"Isaac Allen"} imgAlt={"Image of Isaac"} imgPath={"/images/isaac1.jpg"} title={"Isaac Allen, Executive Director"} preview={"Isaac Allen has been working for DEBATE-Kansas City since 2006. In August of 2018, he was promoted to Executive Director. In his time with DKC, Isaac has worked to grow participation from a few hundred students in 2006 to over a thousand students in 2017. He spearheaded DKC's expansion into middle school programming, an endeavor that has been hailed as a national model for middle school debate. Mr. Allen has been actively involved with policy debate for nearly two decadeds including coaching and debating for Missouri State University. Mr. Allen has also served as adjunct faculty for the UMKC Department of Communication Studies, teaching public speaking, discourse, and interpersonal communication courses."} imgHeight={"500px"} imgWidth={"700px"} 
+            />
+          </Grid>
+          <Grid item>
+            <ExpandoCard 
+              expandedOnLoad={true} imgTitle={"Corey Fisher"} imgAlt={"Image of Corey"} imgPath={"/images/corey-anthony.jpg"} title={"Corey Fisher, Program Director"} preview={"Corey Fisher is an alum of DEBATE-Kansas City and has been volunteering around the league since graduating high school. Corey debated in high school at Lincoln College Prep, where he qualified for the National Speech & Debate Association (NSDA) tournament his senior year. In college, Corey debated for the University of Missouri-Kansas City, where he won an array of top speaker awards, advanced through countless elimation rounds, and, of course, hoisted his fair share of trophies. His senior year of college served as a triumphant finale to a storied debate career. Corey and his partner Anthony were selected as one of the top 16 teams in the country, receiving a 1st Round at Large bid to the National Debate Tournament (NDT). Corey and Anthony finished 2nd at the Cross Examination Debate Association (CEDA) National Tournament, with Corey earning the honors of 2nd Place Speaker and the CEDA Debater of the Year award. At the NDT, Corey and Anthony advanced to the quarter-final round. Corey was named the 7th Place Speaker. Corey has also served as an assistant coach for both Emory and Harvard University."} imgHeight={"500px"} imgWidth={"700px"} content={"Isaac Allen has been working for DEBATE-Kansas City since 2006. In August of 2018, he was promoted to Executive Director. In his time with DKC, Isaac has worked to grow participation from a few hundred students in 2006 to over a thousand students in 2017. He spearheaded DKC's expansion into middle school programming, an endeavor that has been hailed as a national model for middle school debate. Mr. Allen has been actively involved with policy debate for nearly two decadeds including coaching and debating for Missouri State University. Mr. Allen has also served as adjunct faculty for the UMKC Department of Communication Studies, teaching public speaking, discourse, and interpersonal communication courses."} value='content'
+            />
+          </Grid>
+           </Grid>
         </Grid>
       </Grid>
     </Container>

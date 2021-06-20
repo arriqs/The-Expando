@@ -68,13 +68,16 @@ function PageContent(props) {
   const { notification, blogs } = props;
   return (
     <Container maxWidth='md'>
-      <Grid style={{textAlign: "center"}} container justify alignItems='center'>
+      <Grid container justify alignItems='center'>
         <br />
         <br />
         <Toolbar></Toolbar>
         <Grid container justify="center" alignItems="center" direction="column">
           <Grid item>
             <h1>Want to Volunteer?</h1>
+          </Grid>
+          <Grid item>
+            <img src="/images/sed-never.jpg" height="auto" width="100vw" style={{maxWidth:"100vw", width:"60vw", height: '80vh'}} />
           </Grid>
           <Grid item>
             <p>DEBATE-Kansas City depends on volunteers to judge our middle school and high school tournaments. No experience is necessary. Volunteering does not require a debate background. DKC has trained hundreds of people in the KC area to become judges. DKC provides judging sessions at every DKC tournament in addition to on-site training.</p>

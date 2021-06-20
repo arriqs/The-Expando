@@ -16,12 +16,12 @@ const tutorialSteps = [
   {
     label: 'DEBATE-Kansas City',
     imgPath:
-      '/images/woman-on-tablet-patio.jpg',
+      '/images/tournament-prep.jpg',
   },
   {
     label: 'Welcome to the Expando',
     imgPath:
-      '/images/woman-happy-leading-meeting.jpg',
+      '/images/lecture-hall.jpg',
   },
   {
     label: 'Learn to Read, React, and Respond.',

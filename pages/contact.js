@@ -77,6 +77,9 @@ function PageContent(props) {
             <h1>Contact</h1>
           </Grid>
           <Grid item>
+            <img src="/images/apple-on-books.jpg" height="auto" width="100vw" style={{maxWidth:"100vw", width:"60vw", height: '80vh'}} />
+          </Grid>
+          <Grid item>
             <h2>Talk to Us</h2>
             <p>We would love to hear your feeback. Being in touch with our community is priority number one. You can give us a piece of your mind by emailing us at debtekc@gmail.com</p>
             <p>We are also active on <a>Facebook</a> and <a>Twitter</a></p>

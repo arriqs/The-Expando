@@ -77,6 +77,9 @@ function PageContent(props) {
             <h1>Debater Resources</h1>
           </Grid>
           <Grid item>
+            <img src="/images/books3.jpg" height="auto" width="100vw" style={{maxWidth:"100vw", width:"60vw", height: '80vh'}} />
+          </Grid>
+          <Grid item>
             <p>DEBATE-Kansas City has provided support to over 10,000 students since 1998. DKC offers middle and high school students the opportunity to compete in policy debate and student congress. Below, students can access our Camp Application (we ask that all camp attendees complete the Student Participation Form), and various resources that can aid their research and help them prepare for competetion.</p>
             <h2>Camp Materials</h2>
             <p>DKC Camp Application</p>
